@@ -1,15 +1,22 @@
+import { Link } from "react-router-dom";
+
 function Navbar() {
 	return (
-		<header className='border-b border-zinc-800 bg-zinc-950'>
+		<nav className='bg-zinc-950 border-b border-zinc-800'>
 			<div className='max-w-6xl mx-auto px-4 py-4 flex justify-between'>
-				<h1 className='text-xl font-bold'>
-					Cinema
-					<span className='text-blue-500'>Book</span>
-				</h1>
+				<Link to='/' className='text-xl font-bold'>
+					🎬 CinemaBook
+				</Link>
 
-				<p className='text-zinc-400'>Online Ticket Booking</p>
+				<div className='flex gap-6'>
+					<Link to='/'>Movies</Link>
+
+					<Link to='/history'>History</Link>
+
+					<Link to='/admin'>Admin</Link>
+				</div>
 			</div>
-		</header>
+		</nav>
 	);
 }
 

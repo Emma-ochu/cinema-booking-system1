@@ -5,6 +5,7 @@ import ShowtimePage from "./pages/ShowtimePage";
 import SeatsPage from "./pages/SeatsPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import ConfirmationPage from "./pages/ConfirmationPage";
+import AdminPage from "./pages/AdminPage";
 import BookingHistory from "./pages/BookingHistoryPage.jsx";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
 
 					<Route path='/confirmation' element={<ConfirmationPage />} />
 					<Route path='/history' element={<BookingHistory />}></Route>
+					<Route path='/admin' element={<AdminPage />}></Route>
 				</Routes>
 			</div>
 		</div>

@@ -9,15 +9,7 @@ import { useBooking } from "../context/BookingContext";
 function SeatsPage() {
 	const navigate = useNavigate();
 
-	const {
-		movie,
-		showtime,
-
-		takenSeats,
-		setTakenSeats,
-
-		selectedSeats,
-	} = useBooking();
+	const { movie, showtime, setTakenSeats, selectedSeats } = useBooking();
 
 	useEffect(() => {
 		if (!showtime) return;
@@ -43,7 +35,7 @@ function SeatsPage() {
 		}
 
 		setTakenSeats(taken);
-	}, [showtime]);
+	}, [showtime, setTakenSeats]);
 
 	if (!movie || !showtime) return null;
 
